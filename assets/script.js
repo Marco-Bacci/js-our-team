@@ -63,3 +63,21 @@ for (let i = 0; i < teamMembers.length; i++) {
   let card = generateCard(teamMembers[i]);
   teamContainer.innerHTML += card;
 }
+
+// creo event listener e recupero elementi del dom
+const addMember = document.getElementById('add-member')
+
+addMember.addEventListener('click',function(e){
+e.preventDefault()
+
+const name = document.getElementById('name')
+const role = document.getElementById('role')
+const email = document.getElementById('email')
+const photo = document.getElementById('photo')
+})
+
+// verifico consistenza dati
+if(name == '' || role ==''|| email ==`` || photo ==``){
+  alert('devi riempire il campo')
+  return
+}
