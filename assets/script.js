@@ -39,26 +39,27 @@ const teamMembers = [
 
 // definisco funzione struttura card
 const generateCard = (member) => {
-  const memberCard = `<div class="col-12 col-sm-6 col-md-4 ">
+  const memberCard = `<div class="col-12 col-md-6 col-lg-4 ">
             <div class="box d-flex gap-2 bg-dark text-white">
-              <div class="box-photo">
+              <div class="box-photo w-25">
                 <img class="w-100" src="./assets/${member.img}" alt="">
               </div>
-              <div class="box-info d-flex flex-column justify-content-center">
-                <h5 class="text-uppercase">${member.name}</h4>
-                <p>${member.role}</p>
-                <p class="text-info">${member.email}</p>
-              </div>
+              <div class="box-info d-flex flex-column justify-content-center ">
+              <ul class ="list-unstyled">
+                <li class="text-uppercase">${member.name}</li>
+                <li>${member.role}</li>
+                <li class="text-info">${member.email}</li>
+                </ul>
+                </div>
             </div>
           </div`;
-          return memberCard;
+  return memberCard;
 };
 
 // recuper elemento DOM della row
 const teamContainer = document.getElementById(`team-member`);
 
-
-for(let i = 0; i<teamMembers.length; i++){
-  let card = generateCard(teamMembers[i])
+for (let i = 0; i < teamMembers.length; i++) {
+  let card = generateCard(teamMembers[i]);
   teamContainer.innerHTML += card;
 }
