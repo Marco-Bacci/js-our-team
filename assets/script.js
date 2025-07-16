@@ -39,10 +39,10 @@ const teamMembers = [
 
 // definisco funzione struttura card
 const generateCard = (member) => {
-  const memberCard = ` <div class="col-12 col-md-4">
+  const memberCard = `<div class="col-12 col-md-4">
             <div class="box d-flex gap-2 bg-dark text-white">
               <div class="box-photo">
-                <img class="w-100" src="${teamMembers.img}" alt="">
+                <img class="w-100" src="./img/${teamMembers.img}" alt="">
               </div>
               <div class="box-info d-flex flex-column justify-content-center">
                 <h5 class="text-uppercase">${teamMembers.name}</h4>
@@ -51,5 +51,14 @@ const generateCard = (member) => {
               </div>
             </div>
           </div`;
+          return memberCard;
 };
 
+// recuper elemento DOM della row
+const teamContainer = document.getElementById(`team-member`);
+
+
+for(let i = 0; i<teamMembers.length; i++){
+  let card = generateCard(teamMembers[i])
+  teamContainer.innerHTML += card;
+}
