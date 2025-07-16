@@ -70,14 +70,32 @@ const addMember = document.getElementById('add-member')
 addMember.addEventListener('click',function(e){
 e.preventDefault()
 
-const name = document.getElementById('name')
-const role = document.getElementById('role')
-const email = document.getElementById('email')
-const photo = document.getElementById('photo')
-})
+const name = document.getElementById('name').value
+const role = document.getElementById('role').value
+const email = document.getElementById('email').value
+const photo = document.getElementById('photo').value
 
 // verifico consistenza dati
 if(name == '' || role ==''|| email ==`` || photo ==``){
   alert('devi riempire il campo')
   return
 }
+
+const newMember = {
+  name,
+  role,
+  email,
+  photo,
+}
+// pusho nell'array il nuovo member
+teamMembers.push(newMember)
+
+// svuoto i campi del form
+document.getElementById('name').value = '';
+document.getElementById('role').value = '';
+
+document.getElementById('email').value = '';
+
+document.getElementById('photo').value = '';
+
+})
