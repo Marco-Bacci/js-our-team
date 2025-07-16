@@ -59,10 +59,14 @@ const generateCard = (member) => {
 // recuper elemento DOM della row
 const teamContainer = document.getElementById(`team-member`);
 
+// definisco funzione che mi renderizza la card 
+const renderCard = () =>{
 for (let i = 0; i < teamMembers.length; i++) {
   let card = generateCard(teamMembers[i]);
   teamContainer.innerHTML += card;
 }
+}
+
 
 // creo event listener e recupero elementi del dom
 const addMember = document.getElementById('add-member')
@@ -98,4 +102,8 @@ document.getElementById('email').value = '';
 
 document.getElementById('photo').value = '';
 
+renderCard()
 })
+
+renderCard()
+
