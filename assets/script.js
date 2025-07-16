@@ -74,6 +74,10 @@ const addMember = document.getElementById('add-member')
 addMember.addEventListener('click',function(e){
 e.preventDefault()
 
+// svuoto teamContainer per non far aggiungere tutte le card
+teamContainer.innerHTML = ''
+
+
 const name = document.getElementById('name').value
 const role = document.getElementById('role').value
 const email = document.getElementById('email').value
