@@ -39,7 +39,7 @@ const teamMembers = [
 
 // definisco funzione struttura card
 const generateCard = (member) => {
-  const memberCard = `<div class="col-12 col-md-4">
+  const memberCard = `<div class="col-12 col-sm-6 col-md-4 ">
             <div class="box d-flex gap-2 bg-dark text-white">
               <div class="box-photo">
                 <img class="w-100" src="./assets/${member.img}" alt="">
