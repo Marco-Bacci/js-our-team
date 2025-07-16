@@ -42,12 +42,12 @@ const generateCard = (member) => {
   const memberCard = `<div class="col-12 col-md-4">
             <div class="box d-flex gap-2 bg-dark text-white">
               <div class="box-photo">
-                <img class="w-100" src="./img/${teamMembers.img}" alt="">
+                <img class="w-100" src="./assets/${member.img}" alt="">
               </div>
               <div class="box-info d-flex flex-column justify-content-center">
-                <h5 class="text-uppercase">${teamMembers.name}</h4>
-                <p>${teamMembers.role}</p>
-                <p class="text-info">${teamMembers.email}</p>
+                <h5 class="text-uppercase">${member.name}</h4>
+                <p>${member.role}</p>
+                <p class="text-info">${member.email}</p>
               </div>
             </div>
           </div`;
