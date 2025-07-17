@@ -42,7 +42,7 @@ const generateCard = (member) => {
   const memberCard = `<div class="col-12 col-md-6 col-lg-4 ">
             <div class="box d-flex gap-2 bg-dark text-white">
               <div class="box-photo w-25">
-                <img class="w-100" src="./assets/${member.img}" alt="">
+                <img class="img-fluid img-adapt" src="./assets/${member.img}" alt="">
               </div>
               <div class="box-info d-flex flex-column justify-content-center ">
               <ul class ="list-unstyled">
